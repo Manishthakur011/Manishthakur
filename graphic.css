@@ -1,0 +1,165 @@
+/* Animation */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  /* height: 100%; */
+  place-items: center;
+  background: rgb(46, 44, 44);
+  margin:0;
+}
+
+h1{
+
+    font-family: 'Pacifico', cursive;
+    margin:0px;
+    /* color:  rgb(255, 250, 250);; */
+    text-align:right;
+    margin:0%;
+    padding: 1%;
+    /* text-shadow: 1px 2px 2px rgb(72, 255, 87); */
+
+    text-shadow: 4px -4px 6px rgba(72, 255, 87,0.88);
+}
+
+::selection {
+  color: #fff;
+  /* background: black; */
+}
+
+.skill-bars {
+  padding: 25px 30px;
+  color: rgb(72, 255, 87);
+  width: 550px;
+  background: black;
+  box-shadow: 5px 5px 20px rgb(92, 229, 103);
+  border-radius: 10px;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.7s .9s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 5;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 1px rgba(115, 249, 66, 0.906),
+    0 1px rgba(89, 255, 89, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #de729f;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.Adobe span {
+  width: 90%;
+}
+
+.bar .progress-line.Canva span {
+  width: 100%;
+}
+
+
+.bar .progress-line.Figma span {
+    width: 65%;
+  } 
+  
+
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.Adobe span::after {
+  content: "90%";
+}
+
+.progress-line.Canva span::after {
+  content: "100%";
+}
+.progress-line.Figma span::after {
+    content: "65%";
+  }
+  
+
+
+
