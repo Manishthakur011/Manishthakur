@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  background-color: rgb(46, 44, 44);
-  color: aliceblue;
-
+  background-color: #000000;
+  color: #f0f8ff;
+ /* bg-color:#2e2c2c */
 }
 
 
@@ -26,14 +26,17 @@ details summary {
   display: inline;
 }
 
+p{
+  font-size:25px;
+}
+
 #front {
   text-align: left;
-  /* margin: 10px 20px; */
   text-align: center;
   padding: 0px;
   font-family: sans-serif;
   font-style: initial;
-  font-size: small;
+  font-size: 10em;
 }
 
 
@@ -58,6 +61,9 @@ a:hover {
   color: #00FFAB;
   text-decoration: none;
 
+}
+#abt{
+  display: inline-block;
 }
 
 .myButton {
@@ -136,23 +142,27 @@ h3 {
   width: 100px;
 }
 
-*/ ul li {
+ ul li {
   margin-right: 25%;
   text-align: inherit;
   padding-left: 0px;
   list-style-type: disc;
+  text-overflow:hidden;
 }
 
 ul {
-  width: 80%;
+  width: 90%;
   display: flex;
+  text-align: center;
   flex-direction: row;
   justify-content: center;
   /* padding-right: 20px; */
   justify-content: space-between;
-
+  font-size: 20px;
+  margin-right: 0%;
+  text-overflow:hidden;
+  
 }
-
 
 
 
@@ -187,21 +197,21 @@ ul {
   color: #fff;
   font-family: sans-serif;
   font-style: initial;
-  font-size: 140%;
+  font-size: 170%;
   padding: 10px;
+  margin: 10px;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid transparent;
+  border-right: .10em solid transparent;
   /* The typwriter cursor */
   white-space: pre-line;
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
+  letter-spacing: .10em;
   animation:
-    typing 5s steps(35, end),
-    blink-caret .7s step-end 5.4;
+    typing 6s steps(35, end),
+    blink-caret .7s step-end 7;
 }
 
 /* The typing effect */
@@ -211,7 +221,7 @@ ul {
   }
 
   to {
-    width: 100%
+    width: 95%
   }
 }
 
@@ -224,6 +234,6 @@ ul {
   }
 
   50% {
-    border-color: #ffa500
+    border-color: #00FFAB
   }
 }
